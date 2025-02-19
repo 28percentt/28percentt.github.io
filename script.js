@@ -5,9 +5,8 @@ let iconPath = "icon.png";
 
 // CODE
 
-// After page load
 document.addEventListener("DOMContentLoaded", function () {
-    document.title = `${name} - Portfolio`;
+    document.title = `${name}'s Portfolio`;
 
     let link = document.createElement('link');
     link.rel = 'icon';
@@ -15,9 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
     link.href = iconPath;
     document.head.appendChild(link);
 
+    let logoElement = document.getElementById('Logo');
+    logoElement.src = iconPath;
+
     let emailLink = document.getElementById("email");
     emailLink.href = `mailto:${email}`;
-    emailLink.textContent = email;
 
     let footerName = document.getElementById("footer-name");
     footerName.textContent = name;
